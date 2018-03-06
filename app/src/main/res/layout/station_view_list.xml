@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/route_go"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/line_logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_toRightOf="@id/line_logo"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/dialog_title_color"
+        android:id="@+id/line_loc_place"
+        android:text="天津大悦城"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/line_logo"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/line_loc_place"
+        android:id="@+id/line_loc_distribute"
+        android:layout_centerVertical="true"
+        android:textColor="@color/city_item_letter_color"
+        android:text="天津市南开区"/>
+</RelativeLayout>
+</LinearLayout>

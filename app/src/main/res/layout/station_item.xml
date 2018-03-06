@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp">
+<RelativeLayout
+    android:layout_width="30dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/loc_now"
+        android:background="@drawable/loc_now"
+        android:layout_centerHorizontal="true"/>
+    <View
+        android:layout_width="12dp"
+        android:layout_height="2dp"
+        android:id="@id/bus_dip_linef"
+        android:layout_below="@id/loc_now"
+        android:layout_marginTop="6dp"
+        android:background="@color/dot"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loc_now"
+        android:id="@+id/dot"
+        android:background="@drawable/dot"/>
+    <View
+        android:layout_width="11dp"
+        android:layout_height="2dp"
+        android:id="@id/bus_dip_linef"
+        android:layout_below="@id/loc_now"
+        android:layout_marginTop="6dp"
+        android:background="@color/dot"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dot"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+       android:text="铃铛阁"/>
+</RelativeLayout>
+</LinearLayout>

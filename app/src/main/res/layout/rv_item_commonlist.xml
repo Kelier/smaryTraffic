@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <!--</RelativeLayout>-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+            <RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/rl_home"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+    android:layout_height="60dp">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/icon_home"
+        android:id="@+id/loc_list_img"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:layout_width="200dp"
+        android:id="@+id/text_meloc"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="回家"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/loc_list_img"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/footer_menu_normal"
+    android:layout_alignParentRight="true"
+    android:layout_marginRight="20dp"
+        android:id="@+id/tip_home"
+    android:text="设置家的位置"
+    android:layout_centerVertical="true"/>
+</RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rl_work"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/icon_pany"
+                android:id="@+id/loc_list_work"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="200dp"
+                android:id="@+id/text_medes"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="上班"
+                android:textColor="@color/cardview_dark_background"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/loc_list_work"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/footer_menu_normal"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:id="@+id/tip_work"
+                android:text="设置公司的位置"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

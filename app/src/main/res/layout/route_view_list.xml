@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title_line"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/back_before"
+                    android:layout_centerVertical="true"
+                    android:id="@id/back_before"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/back_before"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_centerVertical="true"
+                    android:text="路线详情"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/map_nav"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/start_line"
+            >
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+        android:layout_centerHorizontal="true"
+            android:id="@+id/start_dip"
+            android:background="@drawable/time_cycle" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+          android:layout_centerHorizontal="true"
+
+            android:layout_below="@id/start_dip"
+            android:background="@color/start_dip" />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/start_line"
+            android:layout_marginLeft="10dp"
+            android:text="我的位置"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/start_line"
+            android:id="@+id/by_lay">
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/by_lay"
+            android:layout_marginLeft="50dp"
+            android:id="@+id/end_line"
+            >
+            <View
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/end_dip"
+                android:background="@color/end_dip" />
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+              android:layout_below="@id/end_dip"
+                android:background="@drawable/time_cycle_red" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:text="终点车站"
+            android:layout_below="@+id/by_lay"
+            android:layout_toEndOf="@id/end_line"
+            android:layout_marginTop="15dp" />
+
+    </RelativeLayout>
+</LinearLayout>

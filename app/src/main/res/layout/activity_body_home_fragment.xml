@@ -1,0 +1,179 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/body_homefrag">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <android.support.design.widget.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="160dp"
+       android:id="@+id/home_nav">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/search_bc_before"
+           android:orientation="vertical">
+           
+       
+       <RelativeLayout
+           android:layout_width="match_parent"
+
+           android:layout_height="80dp"
+
+           >
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_alignParentLeft="true"
+               android:layout_marginLeft="20dp"
+               android:textColor="@color/colorWhite"
+               android:textStyle="bold"
+               android:id="@+id/home_loc_city"
+               android:textSize="20dp"
+               android:text="城市"
+               android:maxLength="4"
+               android:layout_height="wrap_content" />
+
+           <ImageView
+               android:layout_width="25dp"
+               android:layout_height="25dp"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="5dp"
+               android:src="@mipmap/home_loccity"
+               android:layout_toRightOf="@+id/home_loc_city"
+               />
+
+           <SearchView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+
+               android:layout_toRightOf="@id/home_loc_city"
+               android:layout_marginLeft="25dp"
+               android:layout_centerVertical="true"
+               android:iconifiedByDefault="false"
+              android:queryHint="搜索公交线路，站点"
+               android:focusableInTouchMode="true"
+               android:focusable="true"
+               android:id="@+id/home_search_des">
+
+           </SearchView>
+
+
+       </RelativeLayout>
+           
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="80dp"
+               >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/home_star_rela"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/home_loc_star"
+                        android:src="@mipmap/home_staruse"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/cardview_shadow_start_color"
+                        android:layout_below="@id/home_loc_star"
+                        android:layout_centerHorizontal="true"
+                        android:text="我的收藏"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/home_map_rela"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/home_loc_map"
+                        android:src="@mipmap/home_map"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/cardview_shadow_start_color"
+                        android:layout_below="@id/home_loc_map"
+                        android:layout_centerHorizontal="true"
+                        android:text="地图"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/home_tip_rela"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    >
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/home_loc_notice"
+                        android:src="@mipmap/home_notice"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/cardview_shadow_start_color"
+                        android:layout_below="@id/home_loc_notice"
+                        android:layout_centerHorizontal="true"
+                        android:text="上车提醒"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+           </RelativeLayout>
+       </LinearLayout>
+   </android.support.design.widget.AppBarLayout>
+    <!--使用PtrClassicFrameLayout套RecyclerViewFinal-->
+    <cn.finalteam.loadingviewfinal.PtrClassicFrameLayout
+        android:layout_below="@id/home_nav"
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptr_duration_to_close="300"
+        app:ptr_duration_to_close_header="2000"
+        app:ptr_keep_header_when_refresh="true"
+        app:ptr_ratio_of_header_height_to_refresh="1.2"
+        app:ptr_resistance="1.7">
+
+    <android.support.v7.widget.RecyclerView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loadMoreMode="click|scroll"
+        app:loadMoreView="cn.finalteam.loadingviewfinal.DefaultLoadMoreView"
+        app:noLoadMoreHideView="false"
+
+        android:id="@+id/home_list_station">
+
+    </android.support.v7.widget.RecyclerView>
+    </cn.finalteam.loadingviewfinal.PtrClassicFrameLayout>
+</RelativeLayout>
+</FrameLayout>

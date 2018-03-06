@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- AppCompatEditText默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <!-- AppCompatEditText选择的底线颜色 -->
+        <item name="colorControlActivated">@color/colorControlActivated</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+<!--底部按钮主题-->
+    <style name="footer_menu_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">@drawable/footer_menu_selector</item>
+        <item name="android:textSize">@dimen/footer_menu_text</item>
+    </style>
+
+    <!-- 登录样式 -->
+    <style name="edit_fore" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- AppCompatEditText默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">#FFFFFF</item>
+        <!-- AppCompatEditText选择的底线颜色 -->
+        <item name="colorControlActivated">#7A378B</item>
+
+    </style>
+<!--弹框样式-->
+    <style name="dia_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- AppCompatEditText默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">#FFFFFF</item>
+        <!-- AppCompatEditText选择的底线颜色 -->
+        <item name="colorControlActivated">#ffe96f</item>
+
+    </style>
+
+    <!--搜索框样式-->
+    <style name="searchview_background" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/cardview_shadow_start_color</item>
+        <!-- AppCompatEditText默认状态状态设置底线颜色 -->
+        <item name="colorControlNormal">@color/cardview_shadow_start_color</item>
+        <!-- AppCompatEditText选择的底线颜色 -->
+        <item name="colorControlActivated">@color/cardview_shadow_start_color</item>
+
+
+
+    </style>
+
+    <style name="TitleBar">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/dialog_button_text_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/base_title_bar_height</item>
+    </style>
+    <!-- 这里设立windowBackground的背景后就不用在xml里再设置了 -->
+    <style name="MyDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/common_alert_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="ui_parent_Wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="cityLocatingProgressStyle">
+        <item name="android:maxWidth">16.0dip</item>
+        <item name="android:maxHeight">24.0dip</item>
+        <item name="android:indeterminateDrawable">@anim/city_locating_anim</item>
+        <item name="android:minWidth">16.0dip</item>
+        <item name="android:minHeight">24.0dip</item>
+    </style>
+
+    <style name="city_hot_header" parent="@style/ui_parent_Wrap">
+        <item name="android:textSize">@dimen/city_list_text_size</item>
+        <item name="android:textColor">@color/city_item_letter_color</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="120dp"
+    android:layout_height="80dp">
+<TextView
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:textSize="40sp"
+    android:id="@+id/time_pre"
+    android:textColor="@color/my_location_bg"
+    android:text="7"/>
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:textSize="20sp"
+       android:layout_toRightOf="@id/time_pre"
+        android:textColor="@color/my_location_bg"
+        android:text="分"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8sp"
+        android:gravity="center_horizontal"
+        android:text="报站/距离"
+        android:layout_below="@+id/time_pre"
+        android:layout_alignStart="@+id/time_pre"
+        android:layout_marginTop="8dp" />
+</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorControlNormal">#000000</color>
+    <color name="colorControlActivated">#7A378B</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="list_line">#EEE9E9</color>
+    <color name="edit_bac">#E5C000</color>
+
+    <color name="hint_text">#FFFFFF</color>
+    <color name="login_bg">#7A378B</color>
+    <color name="title_bg">#fff</color>
+    <color name="title_text">#333</color>
+    <color name="content_text">#333</color>
+    <color name="footer_menu_normal">#c4c5c9</color>
+    <color name="footer_menu_checked">#ffe96f</color>
+
+    <color name="search_bc_before">#ffe96f</color>
+    <color name="my_location_bg">#ffe96f</color>
+    <color name="home_listbc">#F7F7F7</color>
+    <!--<color name="my_location_bg">#3DB39E</color>-->
+
+    <color name="city_search_bg">#fff2f2f2</color>
+
+    <color name="city_item_letter_color">#ff8c8c8c</color>
+    <color name="city_item_text_color">#ff5c5c5c</color>
+    <color name="city_item_divider_color">#ffdddddc</color>
+    <color name="uniform_black">#ff161616</color>
+    <color name="uniform_light_gray">#ff787878</color>
+    <color name="reflection_default_to">#00000000</color>
+    <color name="dialog_title_color">#ff333333</color>
+    <color name="dialog_content_color">#ff495a6d</color>
+    <color name="dialog_divider_color">#ffff6a22</color>
+    <color name="dialog_button_text_color">#ffff6a22</color>
+    <color name="dialog_blue">#ff0079ff</color>
+    <color name="line_gray">#ffd7d7d7</color>
+    <color name="click_gray">#ffd9d9d9</color>
+    <color name="deep_gray">#ff333333</color>
+    <color name="light_gray">#ff999999</color>
+    <color name="inner_divider">#ffe1e1e1</color>
+
+
+    <color name="start_dip">#54ff9b</color>
+    <color name="end_dip">#DE5145</color>
+    <color name="blue_dip">#4F94CD</color>
+    <color name="bus_dip">#E0EEEE</color>
+    <color name="sub_dip">#F5F5DC</color>
+    <color name="subway_dip">#CDC9A5</color>
+    <color name="dot">#7ADD5A</color>
+</resources>

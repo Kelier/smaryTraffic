@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/sub_dip">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sub_move"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:id="@id/start_line"
+            >
+            <View
+                android:layout_width="2dp"
+                android:layout_height="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/bus_dip_linef"
+                android:background="@color/subway_dip" />
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/bus_dip_linef"
+                android:id="@+id/brown_dip_start"
+                android:background="@drawable/time_cycle_black" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/brown_dip_start"
+                android:id="@+id/brown_dip"
+                android:background="@color/subway_dip" />
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/brown_dip"
+                android:id="@+id/brown_dip_end"
+                android:background="@drawable/time_cycle_black" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/brown_dip_end"
+                android:id="@+id/bus_dip_linel"
+                android:background="@color/subway_dip" />
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/start_line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/bus_lay_start"
+            android:text="起点"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/start_line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:layout_below="@id/bus_lay_start"
+            android:id="@+id/bus_lay_mid"
+            android:text="线路"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/start_line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:layout_below="@id/bus_lay_mid"
+            android:id="@+id/bus_lay_end"
+            android:text="终点"/>
+    </RelativeLayout>
+</LinearLayout>

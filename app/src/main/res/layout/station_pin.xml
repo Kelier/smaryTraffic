@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/back_before"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/back_before"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/back_before"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:textSize="@dimen/text_size_15"
+                    android:textColorHint="@color/city_item_letter_color"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/cardview_shadow_start_color"
+                    android:id="@+id/search_destination"
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/nav_my"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/nav_go">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@mipmap/nav_my"
+            android:id="@+id/icon_navmy"
+          android:layout_centerVertical="true"></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_toEndOf="@id/icon_navmy"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="我的位置"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:id="@id/fenfe_line"
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_centerInParent="true"
+            />
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/nav_go"
+            android:layout_toRightOf="@id/fenfe_line"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_alignParentRight="true"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@mipmap/nav_go"
+                android:id="@+id/icon_navgo"
+                android:layout_centerVertical="true"></ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_toEndOf="@id/icon_navgo"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="地图选点"/>
+        </RelativeLayout>
+         />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:background="@drawable/nav_mybg"
+
+        android:id="@+id/Push_Tip">
+<android.support.v7.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/station_line">
+
+</android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</LinearLayout>

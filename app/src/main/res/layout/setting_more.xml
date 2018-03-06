@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/back_before"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/back_before"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/back_before"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="系统设置"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+       android:paddingLeft="20dp"
+        android:textColor="@color/cardview_dark_background"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/layerlist"
+        android:text="离线地图"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:textColor="@color/cardview_dark_background"
+        android:clickable="true"
+        android:background="@drawable/layerlist"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="锁屏公交"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:textColor="@color/cardview_dark_background"
+        android:clickable="true"
+        android:background="@drawable/layerlist"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="检查更新"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+    </RelativeLayout>
+
+</LinearLayout>

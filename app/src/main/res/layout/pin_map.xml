@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@mipmap/back_before"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/back_before"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/back_before"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="@dimen/text_size_15"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/search_destination"
+                    android:text="选择地点"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.baidu.mapapi.map.MapView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map_add_lay"
+        android:id="@+id/choose_map">
+
+    </com.baidu.mapapi.map.MapView>
+    <ImageButton
+        android:id="@+id/roundset"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/map_add_lay"
+        android:background="@drawable/shape"
+        android:foregroundGravity="center"
+        android:src="@drawable/reset"
+        />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@id/map_add_lay"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite"
+            >
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:id="@+id/pin_preview"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/dialog_title_color"
+                    android:gravity="center_vertical"
+                    android:text="定位中.."
+                    android:id="@+id/address_loc"/>
+            </RelativeLayout>
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/picthed_add"
+                android:text="确定"
+                android:background="@color/colorWhite"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/my_location_bg"/>
+        </RelativeLayout>
+</RelativeLayout>
+</LinearLayout>

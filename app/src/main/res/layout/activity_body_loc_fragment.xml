@@ -1,0 +1,190 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/body_locfrag">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar_ROUTE"
+            >
+
+            <!--<android.support.v7.widget.Toolbar-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:contentInsetStart="0dp">-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                android:background="@drawable/layerlist">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="路径规划"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/cardview_dark_background"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/search_bc_before"
+                    android:id="@+id/search_line"
+                    android:text="搜索"/>
+            </RelativeLayout>
+
+            <!--</android.support.v7.widget.Toolbar>-->
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/toolbar_ROUTE"
+            android:id="@+id/transform_ROUTE"
+            >
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="59.5dp"
+                android:id="@+id/my_location"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_above="@+id/transfer_line"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/loc_my"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/image_loc_my"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/first_text"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/image_loc_my"
+                    android:text="我的位置"
+                    android:textColor="@color/my_location_bg"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="120dp"
+                android:id="@+id/transfer_line"
+                android:background="@color/list_line"
+                android:layout_centerInParent="true"></View>
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="59.5dp"
+                android:layout_below="@id/transfer_line"
+                android:id="@+id/towhere_location"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_alignParentBottom="true">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/loc_go"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/image_loc_go"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/second_text"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/image_loc_go"
+                    android:text="你要去哪儿？"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:layout_toRightOf="@id/transfer_line"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/exchange_layout"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/transform"
+
+                     />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/loc_bcground2"
+            android:layout_below="@id/transform_ROUTE">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                android:scrollbars="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+                    <include layout="@layout/rv_item_commonlist"></include>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:id="@+id/common_routeview"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@color/colorWhite"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/add_locuse">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/search_bc_before"
+                            android:layout_centerInParent="true"
+
+                            android:id="@+id/text_addloc"
+                            android:textSize="16sp"
+                            android:text="添加地点">
+
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/search_bc_before"
+                            android:layout_centerInParent="true"
+                            android:textSize="24sp"
+                            android:layout_toLeftOf="@id/text_addloc"
+                            android:text="+"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</FrameLayout>
